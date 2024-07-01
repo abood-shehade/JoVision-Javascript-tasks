@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 7</title>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        function updateTime() {
+            const curr = new Date();
+            const hours = String(curr.getHours()).padStart(2, '0');
+            const minutes = String(curr.getMinutes()).padStart(2, '0');
+            const seconds = String(curr.getSeconds()).padStart(2, '0');
+            const currentTime = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('time').textContent = currentTime;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
